@@ -6,7 +6,7 @@
 
 @section('content')
     <center>
-    <p>Create New Bank </p>
+    <h3>Create New Bank </h3>
         <br>
     <form action="/banks" method="post">
         @csrf

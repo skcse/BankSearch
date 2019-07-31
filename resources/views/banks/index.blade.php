@@ -16,7 +16,8 @@
             <tr>
             <td>{{ ($results->currentpage()-1) * $results->perpage() + $key + 1 }}</td>
         <td>{{$res->bankName}}</td>
-            <td><a href="/banks/{{$res->id}}">Edit</a></td>
+{{--            <td><a href="/banks/{{$res->id}}">Edit</a></td>--}}
+                <td><a href="#">Edit</a> </td>
             </tr>
     @endforeach
     </table>

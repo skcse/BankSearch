@@ -15,7 +15,7 @@ class BanksController extends Controller
      */
     public function index()
     {
-        $results =DB::table('banks')->simplePaginate(2) ;
+        $results =DB::table('banks')->simplePaginate(5) ;
 //        return $results;
         return view('banks.index',compact('results'));
     }
@@ -43,7 +43,7 @@ class BanksController extends Controller
             'bankName' => ['required','min:3']
         ]);
         $bankN->create($auth);
-        return redirect('/banks');
+        return redirect('/');
     }
 
     /**

@@ -50,7 +50,7 @@ class BranchController extends Controller
 //        $branch->branchIfsc = request('branchIfsc');
 //        $branch->bank_id = request('bank_id');
 //        $branch->save();
-        return redirect('/branch');
+        return redirect('/');
     }
 
     /**
@@ -106,7 +106,7 @@ class BranchController extends Controller
     public function searchByIfsc()
     {
         $name = request('searchByIfsc');
-        $results =  Branch::where('branchIfsc', 'equals', $name)->get();
+        $results =  Branch::where('branchIfsc', 'like', $name)->get();
         return view('branch.search',compact('results'));
     }
 }
